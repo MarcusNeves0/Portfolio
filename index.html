@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Marcus Neves</title>
+
+    <!-- Todo o nosso CSS vai aqui dentro da tag <style> -->
+    <style>
+        /* Estilos gerais para a página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* --- SEÇÃO DO HEADER --- */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            
+            /* Liga o Flexbox para alinhar a foto e o bloco de info */
+            display: flex;
+            align-items: center; /* Alinha os itens verticalmente */
+        }
+
+        /* Estilo para a imagem de perfil (à esquerda) */
+        header .perfil {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-right: 20px; /* Espaço entre a foto e o bloco central */
+        }
+
+        /* Bloco de informações (no centro) */
+        header .info {
+            /* Faz este bloco crescer e ocupar todo o espaço central */
+            flex-grow: 1; 
+
+            /* Organiza o conteúdo interno (nome, título, logo) em uma coluna */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza os itens da coluna horizontalmente */
+        }
+        
+        /* Estilo para o logo do Python dentro do bloco de info */
+        header .logo-python {
+            width: 40px;
+            height: auto;
+            margin-top: 10px; /* Espaço acima do logo */
+        }
+        
+        /* Ajustes no texto do header para remover margens extras */
+        header h1, header p {
+            margin: 0;
+        }
+
+
+        /* --- RESTANTE DOS ESTILOS --- */
+        main, footer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .projeto {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .projeto h3 {
+            margin-top: 0;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Cabeçalho -->
+    <header>
+        <!-- Sua foto de perfil fica aqui -->
+        <img src="https://placehold.co/80x80/EFEFEF/333?text=Foto" alt="Foto de Perfil" class="perfil">
+        
+        <!-- Este bloco agrupa o texto e o logo que serão centralizados -->
+        <div class="info">
+            <h1>Marcus Neves</h1>
+            <p>Técnico de informática</p>
+            <img src="https://www.python.org/static/community_logos/python-logo-generic.svg" alt="Logo Python" class="logo-python">
+        </div>
+    </header>
+
+    <!-- 2. Conteúdo Principal -->
+    <main>
+        <!-- Seção Sobre Mim -->
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Começando a programar, com foco em Automação, IA e Jogos. Sempre em busca de novos desafios e aprendizados para expandir minhas habilidades no mundo da tecnologia.</p>
+        </section>
+
+        <!-- Seção de Projetos -->
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            
+            <div class="projeto">
+                <h3>Projeto Automação de Tarefas</h3>
+                <p>Desenvolvimento de um script em Python para automatizar a organização de arquivos e relatórios diários, economizando horas de trabalho manual.</p>
+                <a href="#" target="_blank">Ver no GitHub</a>
+            </div>
+            
+            <div class="projeto">
+                <h3>Estudo de IA para Reconhecimento de Imagens</h3>
+                <p>Um projeto acadêmico utilizando bibliotecas como TensorFlow e Keras para treinar um modelo simples de reconhecimento de objetos.</p>
+                <a href="#" target="_blank">Ver no GitHub</a>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Gostou do que viu? Vamos conversar!</p>
+            <ul>
+                <li>Email: <a href="mailto:seuemail@example.com">seuemail@example.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/seuperfil" target="_blank">Meu Perfil no LinkedIn</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- 3. Rodapé -->
+    <footer>
+        <p>&copy; 2025 Marcus Neves. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
