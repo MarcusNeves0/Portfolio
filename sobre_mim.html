@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- O título correto para esta página -->
+    <title>Sobre Mim</title>
+
+    <style>
+        /* Estilos gerais para a página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header .perfil {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-right: 20px;
+        }
+
+        header .info {
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        header .logo-python {
+            width: 40px;
+            height: auto;
+            margin-top: 10px;
+        }
+        
+        header h1, header p {
+            margin: 0;
+        }
+
+        /* --- MENU DE NAVEGAÇÃO --- */
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        nav ul li a.active {
+            background-color: #007bff;
+            font-weight: bold;
+        }
+
+
+        /* --- RESTANTE DOS ESTILOS --- */
+        main, footer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Cabeçalho (Adicionado de volta para consistência) -->
+    <header>
+        <img src="https://placehold.co/80x80/EFEFEF/333?text=Foto" alt="Foto de Perfil" class="perfil">
+        <div class="info">
+            <h1>Marcus Neves</h1>
+            <p>Técnico de informática</p>
+            <img src="https://www.python.org/static/community_logos/python-logo-generic.svg" alt="Logo Python" class="logo-python">
+        </div>
+    </header>
+
+    <!-- 2. Menu de Navegação (Corrigido para esta página) -->
+    <nav>
+        <ul>
+            <!-- Note que você mudou o link da página principal, o que está correto! -->
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <!-- A classe "active" está no lugar certo para esta página -->
+            <li><a href="sobre_mim.html" class="active">Sobre Mim</a></li>
+        </ul>
+    </nav>
+
+    <!-- 3. Conteúdo Principal (Estrutura corrigida) -->
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Começando a programar, com foco em Automação, IA e Jogos. Sempre em busca de novos desafios e aprendizados para expandir minhas habilidades no mundo da tecnologia.</p>
+        </section>
+    </main>
+
+    <!-- 4. Rodapé (Adicionado de volta para consistência) -->
+    <footer>
+        <p>&copy; 2025 Marcus Neves. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

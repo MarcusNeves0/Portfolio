@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Projetos</title>
+        <style>
+        /* Estilos gerais para a página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header .perfil {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-right: 20px;
+        }
+
+        header .info {
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        header .logo-python {
+            width: 40px;
+            height: auto;
+            margin-top: 10px;
+        }
+        
+        header h1, header p {
+            margin: 0;
+        }
+
+        /* --- NOVO: MENU DE NAVEGAÇÃO --- */
+        nav {
+            background-color: #444; /* Um cinza um pouco mais claro que o header */
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centraliza os itens do menu */
+        }
+
+        nav ul li {
+            display: inline-block; /* Coloca os itens lado a lado */
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+        }
+
+        /* Efeito ao passar o mouse sobre o link */
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Estilo para a aba ATIVA (a página atual) */
+        nav ul li a.active {
+            background-color: #007bff; /* Cor de destaque */
+            font-weight: bold;
+        }
+
+
+        /* --- RESTANTE DOS ESTILOS --- */
+        main, footer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <!-- O link "Sobre Mim" está com a classe "active" porque esta é a página index.html -->
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="projetos.html" class="active">Projetos</a></li>
+            <li><a href="sobre_mim.html">Sobre Mim</a></li>
+        </ul>
+    </nav>
+    <main>
+<!-- Seção de Projetos -->
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="projeto">
+                <h3>Projeto Automação de Tarefas</h3>
+                <p>Desenvolvimento de um script em Python para automatizar a organização de arquivos e relatórios diários, economizando horas de trabalho manual.</p>
+                <a href="#" target="_blank">Ver no GitHub</a>
+            </div>
+            
+            <div class="projeto">
+                <h3>Estudo de IA para Reconhecimento de Imagens</h3>
+                <p>Um projeto acadêmico utilizando bibliotecas como TensorFlow e Keras para treinar um modelo simples de reconhecimento de objetos.</p>
+                <a href="#" target="_blank">Ver no GitHub</a>
+            </div>
+        </section>
+        </section>
+    </main>
+</body>
+</html>
