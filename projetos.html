@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <title>Projetos</title>
         <style>
-        /* Estilos gerais para a página */
+        /* Estilos gerais para a página com nova paleta de cores */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #E3F2FD; /* Fundo em azul claro (MANTIDO) */
+            color: #3E2723; /* Texto em tom de marrom escuro para combinar com o header */
         }
 
         /* --- CABEÇALHO --- */
         header {
-            background-color: #333;
+            background-color: #5D4037; /* Marrom escuro para o cabeçalho */
             color: #fff;
             padding: 20px;
             display: flex;
@@ -48,9 +48,9 @@
             margin: 0;
         }
 
-        /* --- NOVO: MENU DE NAVEGAÇÃO --- */
+        /* --- MENU DE NAVEGAÇÃO --- */
         nav {
-            background-color: #444; /* Um cinza um pouco mais claro que o header */
+            background-color: #6D4C41; /* Tom de marrom um pouco mais claro */
             padding: 10px 0;
         }
 
@@ -58,11 +58,11 @@
             list-style: none;
             margin: 0;
             padding: 0;
-            text-align: center; /* Centraliza os itens do menu */
+            text-align: center;
         }
 
         nav ul li {
-            display: inline-block; /* Coloca os itens lado a lado */
+            display: inline-block;
             margin: 0 15px;
         }
 
@@ -72,22 +72,22 @@
             font-size: 1.1em;
             padding: 8px 16px;
             border-radius: 5px;
-            transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+            transition: background-color 0.3s;
         }
 
         /* Efeito ao passar o mouse sobre o link */
         nav ul li a:hover {
-            background-color: #555;
+            background-color: #795548; /* Marrom mais claro para o hover */
         }
 
         /* Estilo para a aba ATIVA (a página atual) */
         nav ul li a.active {
-            background-color: #007bff; /* Cor de destaque */
+            background-color: #D32F2F; /* Vermelho para o destaque */
             font-weight: bold;
         }
 
 
-        /* --- RESTANTE DOS ESTILOS --- */
+        /* --- CONTEÚDO PRINCIPAL --- */
         main, footer {
             max-width: 800px;
             margin: 0 auto;
@@ -95,23 +95,63 @@
         }
 
         h2 {
-            color: #333;
-            border-bottom: 2px solid #333;
+            color: #5D4037; /* Títulos em marrom escuro para combinar */
+            border-bottom: 2px solid #D32F2F; /* Borda inferior em vermelho para combinar */
             padding-bottom: 10px;
         }
 
         section {
-            background-color: #fff;
+            background-color: #FFFFFF; /* Seções com fundo branco para contraste */
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
         }
 
+        /* --- ESTILOS PARA O CARROSSEL DE LOGOS --- */
+        .logo-scroller {
+            max-width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
+
+        .scroller-inner {
+            display: flex;
+            gap: 30px;
+            white-space: nowrap;
+            animation: scroll 30s linear infinite;
+        }
+
+        .logo-scroller:hover .scroller-inner {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        .scroller-inner img {
+            height: 50px;
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+
+        .scroller-inner img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* --- RODAPÉ --- */
         footer {
             text-align: center;
             margin-top: 20px;
             font-size: 0.9em;
-            color: #777;
+            color: #616161;
         }
     </style>
 </head>
@@ -129,15 +169,15 @@
         <section id="projetos">
             <h2>Meus Projetos</h2>
             <div class="projeto">
-                <h3>Projeto Automação de Tarefas</h3>
-                <p>Desenvolvimento de um script em Python para automatizar a organização de arquivos e relatórios diários, economizando horas de trabalho manual.</p>
-                <a href="#" target="_blank">Ver no GitHub</a>
+                <h3>CyberFury</h3>
+                <p>Jogo de luta no estilo 2D, com vários personagens inspirados em jogos famosos, apenas para teste de linguagem e construido em conjunto com Gemini.</p>
+                <a href="https://marcusneves0.github.io/CyberFury/" target="_blank">Jogar CyberFury</a>
             </div>
             
             <div class="projeto">
-                <h3>Estudo de IA para Reconhecimento de Imagens</h3>
-                <p>Um projeto acadêmico utilizando bibliotecas como TensorFlow e Keras para treinar um modelo simples de reconhecimento de objetos.</p>
-                <a href="#" target="_blank">Ver no GitHub</a>
+                <h3>Anime Name Duel</h3>
+                <p>Jogo de advinhação de nome dos personagens dos animes mais nostalgicos e mais famosos atualmente</p>
+                <a href="https://anime-name-duel.web.app/" target="_blank">Jogar Anime Name Duel</a>
             </div>
         </section>
         </section>
