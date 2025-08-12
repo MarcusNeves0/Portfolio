@@ -7,19 +7,19 @@
     <title>Sobre Mim</title>
 
     <style>
-        /* Estilos gerais para a página */
+        /* Estilos gerais para a página com nova paleta de cores */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #E3F2FD; /* Fundo em azul claro (MANTIDO) */
+            color: #3E2723; /* Texto em tom de marrom escuro para combinar com o header */
         }
 
         /* --- CABEÇALHO --- */
         header {
-            background-color: #333;
+            background-color: #5D4037; /* Marrom escuro para o cabeçalho */
             color: #fff;
             padding: 20px;
             display: flex;
@@ -53,7 +53,7 @@
 
         /* --- MENU DE NAVEGAÇÃO --- */
         nav {
-            background-color: #444;
+            background-color: #6D4C41; /* Tom de marrom um pouco mais claro */
             padding: 10px 0;
         }
 
@@ -79,16 +79,16 @@
         }
 
         nav ul li a:hover {
-            background-color: #555;
+            background-color: #795548; /* Marrom mais claro para o hover */
         }
 
         nav ul li a.active {
-            background-color: #007bff;
+            background-color: #D32F2F; /* Vermelho para o destaque */
             font-weight: bold;
         }
 
 
-        /* --- RESTANTE DOS ESTILOS --- */
+        /* --- CONTEÚDO PRINCIPAL --- */
         main, footer {
             max-width: 800px;
             margin: 0 auto;
@@ -96,29 +96,68 @@
         }
 
         h2 {
-            color: #333;
-            border-bottom: 2px solid #333;
+            color: #5D4037; /* Títulos em marrom escuro para combinar */
+            border-bottom: 2px solid #D32F2F; /* Borda inferior em vermelho para combinar */
             padding-bottom: 10px;
         }
 
         section {
-            background-color: #fff;
+            background-color: #FFFFFF; /* Seções com fundo branco para contraste */
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
         }
 
+        /* --- ESTILOS PARA O CARROSSEL DE LOGOS --- */
+        .logo-scroller {
+            max-width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
+
+        .scroller-inner {
+            display: flex;
+            gap: 30px;
+            white-space: nowrap;
+            animation: scroll 30s linear infinite;
+        }
+
+        .logo-scroller:hover .scroller-inner {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        .scroller-inner img {
+            height: 50px;
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+
+        .scroller-inner img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* --- RODAPÉ --- */
         footer {
             text-align: center;
             margin-top: 20px;
             font-size: 0.9em;
-            color: #777;
+            color: #616161;
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. Cabeçalho (Adicionado de volta para consistência) -->
     <header>
         <img src="https://placehold.co/80x80/EFEFEF/333?text=Foto" alt="Foto de Perfil" class="perfil">
         <div class="info">
@@ -131,7 +170,6 @@
     <!-- 2. Menu de Navegação (Corrigido para esta página) -->
     <nav>
         <ul>
-            <!-- Note que você mudou o link da página principal, o que está correto! -->
             <li><a href="index.html">Principal</a></li>
             <li><a href="projetos.html">Projetos</a></li>
             <!-- A classe "active" está no lugar certo para esta página -->
@@ -139,7 +177,6 @@
         </ul>
     </nav>
 
-    <!-- 3. Conteúdo Principal (Estrutura corrigida) -->
     <main>
         <section id="sobre">
             <h2>Sobre Mim</h2>
